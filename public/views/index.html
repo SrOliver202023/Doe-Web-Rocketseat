@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doe Sangue! Doe Vida!</title>
+  <link rel="stylesheet" href="/styles/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@0;1&display=swap" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+  <header>
+    <img class="logo" src="/images/logo.png" alt="Imagem Doe">
+    <h2>A sua doação importa</h2>
+    <p>Até 3 vidas com 1 doação</p>
+    <p>Mais de 38.000 doações são necessárias todos os dias</p>
+    <p>Apenas 1,9% da população brasileira, doa sangue.</p>
+
+    <button>Quero ajudar</button>
+  </header>
+  <section class="form hide">
+    <h2>Entre na lista de doadores</h2>
+    <form action="#" method="POST">
+      <input type="text" id="name" name="name" placeholder="Nome Completo">
+      <input type="text" id="email" name="email" placeholder="Email">
+      <input type="text" id="blood" name="blood" placeholder="Tipo Sanguíneo">
+      <button>Quero Ajudar</button>
+    </form>
+  </section>
+  <main>
+    <h1>{{valor}}</h1>
+    <h2>Últimos <span>Doadores</span></h2>
+
+    <section class="donors">
+      {% for donor in donors %}
+        <div class="donor">
+          <div class="blood">{{donor.blood}}</div>
+          <p>{{donor.name}}</p>
+        </div>
+      {%endfor%}
+
+    </section>
+  </main>
+  <footer>Com amor ❤️ Rocketseat 🚀</footer>
+  <script src="/scripts/scripts.js"></script>
+</body>
+</html>
